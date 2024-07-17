@@ -1,0 +1,69 @@
+/* ブロック全体 */
+.block {
+    padding-left: 5px;
+    
+    display: flex;
+    flex-flow: column;
+    
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: bisque;
+    
+    word-break: break-all;
+}
+
+/* 矢印 */
+.arrow_right {
+    position: relative;
+    padding-right: 25px;
+}
+.arrow_right::after { /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 13px;    /* くの字を山なりに見た時、左側の長さ */
+    height: 13px;   /* くの字を山なりに見た時、右側の長さ */
+    border-top: 3px solid #000;     /* くの字を山なりに見た時、左側の太さと色 */
+    border-right: 3px solid #000;   /* くの字を山なりに見た時、右側の太さと色 */
+    transform: rotate(45deg);    /* くの字の向き */
+}
+.arrow_right.pushed::after { /* くの字の表示設定 */
+    content: "";
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    width: 13px;    /* くの字を山なりに見た時、左側の長さ */
+    height: 13px;   /* くの字を山なりに見た時、右側の長さ */
+    border-top: 3px solid #000;     /* くの字を山なりに見た時、左側の太さと色 */
+    border-right: 3px solid #000;   /* くの字を山なりに見た時、右側の太さと色 */
+    transform: rotate(135deg);    /* くの字の向き */
+}
+
+/* 名前 */
+.block > .info > .name {
+    font-size: x-large;
+}
+
+/* カテゴリ */
+.block > .info > .category {
+    font-size: large;
+}
+
+/* 詳細 */
+.block > .detail {
+    display: none;
+}
+.block > .detail.pushed {
+    width: calc(100% - 40px);
+    display: block;
+}
+.block > .detail > .line {
+    /* width: %; */
+}
+
+

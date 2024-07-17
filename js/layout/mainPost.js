@@ -3,16 +3,16 @@
     // 諸々の設置
     window.addEventListener("DOMContentLoaded", () => {
         // クラス作成
-        const test = new Spot();
+        // const test = new Spot();
 
         // 共通レイアウト
         addAreaHeader("Header");
-        addButtonPost();
+        addAreaForm();
         // commonHamburger();
         // commonAnnounce();
 
         // 機能
-        addBlockSite(test);
+        // addBlockSite(test);
         // mainSearch();
 
     });
