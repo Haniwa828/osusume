@@ -32,6 +32,6 @@ const addAreaDetail = (parent, spot) => {
                 ttt.textContent = "編集";
                 ttt.onclick = (() => movePage("./html/editPost.html?id=" + spot.id));
             });
-        });
+        }); 
     });
 }
