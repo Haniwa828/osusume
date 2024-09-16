@@ -65,5 +65,21 @@
 .block > .detail > .line {
     /* width: %; */
 }
+.block > .detail > .button_container {
+    padding-right: 5px;
+    
+    display: flex;
+    justify-content: flex-end;
+}
+.block > .detail > .button_container > .button {
+    margin-bottom: 5px;
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    border: 1px solid;
+    border-radius: 5px;
+    background-color:lightgrey;
+}
 
 

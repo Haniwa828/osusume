@@ -25,5 +25,13 @@ const addAreaDetail = (parent, spot) => {
         addElm("Span", t, ["address"], (tt) => {
             tt.textContent = spot.number;
         });
+
+        addElm("br", t)
+        addElm("span", t, ["button_container"], (tt) => {
+            addElm("button", tt, ["button"], (ttt) => {
+                ttt.textContent = "編集";
+                ttt.onclick = (() => movePage("./html/editPost.html?id=" + spot.id));
+            });
+        });
     });
 }

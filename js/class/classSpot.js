@@ -19,7 +19,7 @@ class Spot {
         number = "000-0000-0000",
         comment = ""
     ) {
-        this.id = "spot" + id;
+        this.id = id;
         this.name = name;
         this.category = category;
         this.url = url;

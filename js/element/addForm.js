@@ -3,6 +3,7 @@ const addForm = (parentArea, className = ["form"], label, inputType, required = 
     addElm("Div", parentArea, className, (t) => {
         addElm("label", t, ["labal"], (tt) => {
             tt.textContent = label;
+            addElm("br", tt)
             addElm("input", tt, ["input"], (ttt) => {
                 ttt.type = inputType;
                 ttt.required = required;

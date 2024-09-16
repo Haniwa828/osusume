@@ -3,6 +3,6 @@ const addButtonPost = () => {
 
     addElm("button", body, ["block"], (t) => {
         t.textContent = "投稿"
-        t.onclick = (() => movePage("./html/post.html"));
+        t.onclick = (() => movePage("./html/editPost.html"));
     });
 }

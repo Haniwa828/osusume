@@ -8,8 +8,14 @@ const addAreaForm = () => {
     addForm(body, ["form"], "電話：", "text", "required");
     addForm(body, ["form"], "コメント：", "text", "required");
 
-    addElm("button", body, ["post"], (t) => {
-        t.textContent = "送信";
-        t.onclick = (() => getForm());
+    addElm("span", body, ["button_container"], (t) => {
+        addElm("button", t, ["button", "post"], (tt) => {
+            tt.textContent = location.search != "" ? "更新" : "送信";
+            tt.onclick = (() => getForm());
+        });
+        addElm("button", t, ["button", "cancel"], (tt) => {
+            tt.textContent = "取消";
+            tt.onclick = (() => getForm());
+        });
     });
 }
